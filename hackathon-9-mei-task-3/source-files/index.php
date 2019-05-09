@@ -3,7 +3,7 @@
  * Plugin Name: WordPress.org Plugin
  * Plugin URI:  https://example.com/plugins/the-basics/
  * Description: Basic WordPress Plugin Header Comment
- * Version:     1.0.0
+ * Version:     1.1.2
  * Author:      WordPress.org
  * Author URI:  https://author.example.com/
  * License:     GPL2

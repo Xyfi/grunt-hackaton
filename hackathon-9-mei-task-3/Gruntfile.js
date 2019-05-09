@@ -1,12 +1,7 @@
+const updateVersion = require( "./custom-tasks/update-version" );
+
 /*global module:false*/
 module.exports = function(grunt) {
-
-  // Project configuration.
-  grunt.initConfig({
-    // Metadata.
-    pkg: grunt.file.readJSON('package.json'),
-  });
-
   // Load tasks here.
 
   // Define aliases here.
@@ -14,4 +9,11 @@ module.exports = function(grunt) {
     grunt.log.writeln( 'This is the default grunt task, create a new task and configure.' );
   });
 
+  grunt.registerTask( "update-version", updateVersion() );
+
+  // Project configuration.
+  grunt.initConfig({
+    // Metadata.
+    pkg: grunt.file.readJSON('package.json'),
+  });
 };

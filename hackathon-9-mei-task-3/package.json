@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "grunt": "^1.0.4"
+  },
+  "dependencies": {
+    "semver": "^6.0.0"
   }
 }
