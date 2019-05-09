@@ -40,7 +40,7 @@ function updateIndexPhpVersion( version ) {
 	grunt.log.writeln( `Replacing ${ oldVersion } with ${ version }` );
 
 	if ( semver.gt( oldVersion, version ) ) {
-		grunt.log.warn( "Warning: Old version is higher that provided version!" );
+		throw Error( "Old version is higher that provided version." );
 	}
 
 	const newContent = content.replace( versionLineRegex, versionPrefix + version );
