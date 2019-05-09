@@ -5,13 +5,30 @@ module.exports = function(grunt) {
   grunt.initConfig({
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
+
+    // config
+    copy: {
+      default: [ 'js', 'html' ],
+      js: {
+        expand: true,
+        src: "**/*.js",
+        dest: "./artifact/",
+        cwd: "source-files"
+      },
+      html: {
+        src: './index.html',
+        dest: "./artifact/",
+      }
+    },
+    sass: {
+
+    },
   });
 
   // Load tasks here.
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Define aliases here.
-  grunt.registerTask('default', 'My default task description', function() {
-    grunt.log.writeln( 'This is the default grunt task, create a new task and configure.' );
-  });
-
+  grunt.registerTask('default', ['copy']);
 };
